@@ -12,10 +12,10 @@ class FacebookWebhook extends Controller
      * Handle the incoming request.
      */
     public function __invoke(Request $request)
-    {       
+    {
 
         Webhook::create([
-            'request_payload' => $request->all(),
+            'request_payload' => $request->all() ?? null,
             'method' => $request->method(),
             'ip_address' => $request->ip(),
             'status' => 'received',
