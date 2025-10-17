@@ -28,3 +28,32 @@ phpMyAdmin is available at http://localhost:8181 (user: root / password: secret)
 Notes:
 - The `app` service uses PHP-FPM and mounts the project as a volume so code changes are immediate.
 - For production you'll want to optimize the Dockerfile (no composer in image, build assets, environment variables securely managed).
+
+HTTPS (local development)
+-------------------------
+This setup supports HTTPS by mounting certificate files into `./docker/certs` and exposing host port `8129`.
+
+Create certs (recommended: mkcert)
+
+1. Install mkcert (https://github.com/FiloSottile/mkcert).
+2. Run:
+
+   mkcert -install
+   mkcert -key-file docker/certs/privkey.pem -cert-file docker/certs/fullchain.pem localhost 127.0.0.1
+
+Alternatively create self-signed certs with openssl:
+
+   mkdir -p docker/certs
+   openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+     -keyout docker/certs/privkey.pem -out docker/certs/fullchain.pem \
+     -subj "/CN=localhost"
+
+Then start the stack:
+
+   docker-compose up -d --build
+
+Open the site at:
+
+   http://localhost:8128
+   https://localhost:8129
+
