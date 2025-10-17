@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('webhooks', function (Blueprint $table) {
             $table->id();
-            $table->text('request_payload')->nullable();
-            $table->text('response_payload')->nullable();
+            $table->json('request_payload')->nullable();
+            $table->json('response_payload')->nullable();
             $table->string('method', 10)->nullable();
             $table->string('status', 50)->nullable();
             $table->string('ip_address', 45)->nullable();
