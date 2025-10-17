@@ -12,13 +12,13 @@ class SystemConfig extends Model
         'value',
     ];
 
-    public function value(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => base64_decode($value),
-            set: fn ($value) => base64_encode($value),
-        );
-    }
+    // public function value(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn ($value) => base64_decode($value),
+    //         set: fn ($value) => base64_encode($value),
+    //     );
+    // }
 
     public static function getValue($key)
     {
