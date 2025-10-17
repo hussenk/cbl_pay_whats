@@ -18,7 +18,7 @@ class SystemConfigSeeder extends Seeder
     {
         SystemConfig::create([
             'key' => 'facebook_app_id',
-            'value' => 'your_facebook_app_id_here',
+            'value' => '1472185290505642',
         ]);
 
         SystemConfig::create([
@@ -28,7 +28,7 @@ class SystemConfigSeeder extends Seeder
 
         SystemConfig::create([
             'key' => 'facebook_secret',
-            'value' => 'your_facebook_secret_here',
+            'value' => 'ca2830f93429ddef49eb8c5c0ff02cd7',
         ]);
 
         SystemConfig::create([
