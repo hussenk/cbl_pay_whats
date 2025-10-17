@@ -31,6 +31,24 @@ class SystemConfigSeeder extends Seeder
             'value' => 'your_facebook_secret_here',
         ]);
 
-        
+        SystemConfig::create([
+            'key' => 'whatsapp_business_number_id',
+            'value' => 'your_whatsapp_business_number_id_here',
+        ]);
+
+        SystemConfig::create([
+            'key' => 'whatsapp_business_phone_number',
+            'value' => 'your_whatsapp_business_phone_number_here',
+        ]);
+
+        SystemConfig::create([
+            'key' => 'whatsapp_token',
+            'value' => 'your_whatsapp_token_here',
+        ]);
+
+        SystemConfig::create([
+            'key' => 'whatsapp_secret',
+            'value' => 'your_whatsapp_secret_here',
+        ]);
     }
 }
