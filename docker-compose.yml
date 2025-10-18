@@ -21,11 +21,9 @@ services:
     restart: unless-stopped
     ports:
       - "8128:80"
-      - "8129:443"
     volumes:
       - ./:/var/www/html:ro
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./docker/certs:/etc/nginx/certs:ro
     depends_on:
       - app
 
