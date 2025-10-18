@@ -4,12 +4,12 @@ services:
   app:
     build: .
     image: cblpay_app:latest
-    container_name: cblpay_app
-    restart: unless-stopped
+      - "80:80"
+      - "443:443"
     working_dir: /var/www/html
     volumes:
       - ./:/var/www/html:cached
-    environment:
+      - ./docker/certs:/etc/nginx/certs:ro
       - APP_ENV=local
       - APP_DEBUG=true
     depends_on:
