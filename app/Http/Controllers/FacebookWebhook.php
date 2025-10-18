@@ -22,7 +22,7 @@ class FacebookWebhook extends Controller
             $challenge = $request->input('hub.challenge') ?? $request->input('hub_challenge');
 
             // Get expected token from SystemConfig or .env fallback
-            $expected = SystemConfig::getValue('facebook_verify_token') ?? getenv('FACEBOOK_VERIFY_TOKEN');
+            $expected = SystemConfig::getValue('facebook_verify_token') ?? 'MyTokenIsHere';
 
             if ($verifyToken && $expected && hash_equals((string) $expected, (string) $verifyToken)) {
                 return response($challenge, 200);
