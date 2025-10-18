@@ -17,6 +17,8 @@ Quick start:
    DB_USERNAME=cbl
    DB_PASSWORD=secret
 
+Note: The MySQL service maps container port 3306 to host port 3307 by default to avoid conflicts with any locally running MySQL instance. If you'd like to use host port 3306, update `docker-compose.yml` and ensure nothing else is listening on 3306.
+
 4. Run migrations:
 
    docker-compose exec app php artisan migrate
@@ -54,6 +56,6 @@ Then start the stack:
 
 Open the site at:
 
-   http://localhost:8128
-   https://localhost:8129
+   http://localhost:8128 (if using non-standard HTTP mapping)
+   https://localhost:8129 (if using non-standard HTTPS mapping)
 

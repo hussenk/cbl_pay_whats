@@ -23,7 +23,7 @@ class SystemConfigSeeder extends Seeder
 
         SystemConfig::create([
             'key' => 'facebook_token',
-            'value' => 'your_facebook_token_here',
+            'value' => 'EAAU68dlIvaoBPieIAkwxAaXTjZC572IwP16wxsvQv6HdmZBLdOmAK8wpfB0bZAGcJsHYer8rrgWCinqkP34rLCwh5NByZAekslqDKMHYhGR7h4Wouqoj0dPoeZCKZAtZCIisKTRXdLp0UTbO9cGMSM94bc1OXdsCluP3nqAKZCO3TR1xJoYHBdaHlwo20LOecEb70KSZCcZA9TfNByfDywEGFQxqN9bgq2laUzEGydbZAePXq9K6wZDZD',
         ]);
 
         SystemConfig::create([
@@ -43,7 +43,7 @@ class SystemConfigSeeder extends Seeder
 
         SystemConfig::create([
             'key' => 'whatsapp_token',
-            'value' => 'your_whatsapp_token_here',
+            'value' => 'EAAU68dlIvaoBPieIAkwxAaXTjZC572IwP16wxsvQv6HdmZBLdOmAK8wpfB0bZAGcJsHYer8rrgWCinqkP34rLCwh5NByZAekslqDKMHYhGR7h4Wouqoj0dPoeZCKZAtZCIisKTRXdLp0UTbO9cGMSM94bc1OXdsCluP3nqAKZCO3TR1xJoYHBdaHlwo20LOecEb70KSZCcZA9TfNByfDywEGFQxqN9bgq2laUzEGydbZAePXq9K6wZDZD',
         ]);
 
         SystemConfig::create([
