@@ -14,6 +14,12 @@ class FacebookWebhook extends Controller
     public function __invoke(Request $request)
     {
 
+        Webhook::create([
+            'request_payload' => $request->all(),
+            'method' => $request->method(),
+            'ip_address' => $request->ip(),
+            'status' => 'received',
+        ]);
 
         // Handle verification requests (GET) from Facebook
         if ($request->isMethod('get')) {
@@ -32,12 +38,6 @@ class FacebookWebhook extends Controller
         }
 
         // For non-verification requests, persist the webhook payload
-        Webhook::create([
-            'request_payload' => $request->all(),
-            'method' => $request->method(),
-            'ip_address' => $request->ip(),
-            'status' => 'received',
-        ]);
 
         // Ensure any other startup side-effects can still use SystemConfig
         SystemConfig::getValue('facebook_app_id');
