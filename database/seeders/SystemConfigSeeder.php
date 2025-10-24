@@ -18,7 +18,7 @@ class SystemConfigSeeder extends Seeder
         SystemConfig::updateOrCreate([
             'key' => 'facebook_app_id',
         ], [
-            'value' => '1472185290505642',
+            'value' => '628783390202400',
         ]);
 
         SystemConfig::updateOrCreate([
@@ -30,25 +30,25 @@ class SystemConfigSeeder extends Seeder
         SystemConfig::updateOrCreate([
             'key' => 'facebook_secret',
         ], [
-            'value' => 'ca2830f93429ddef49eb8c5c0ff02cd7',
+            'value' => '3f47f70a6d67e4860d32eae980fa16ab',
         ]);
 
         SystemConfig::updateOrCreate([
             'key' => 'whatsapp_business_number_id',
         ], [
-            'value' => 'your_whatsapp_business_number_id_here',
+            'value' => '1122355860051986',
         ]);
 
         SystemConfig::updateOrCreate([
             'key' => 'whatsapp_business_phone_number',
         ], [
-            'value' => 'your_whatsapp_business_phone_number_here',
+            'value' => '789379777599940',
         ]);
 
         SystemConfig::updateOrCreate([
             'key' => 'whatsapp_token',
         ], [
-            'value' => 'EAAU68dlIvaoBPieIAkwxAaXTjZC572IwP16wxsvQv6HdmZBLdOmAK8wpfB0bZAGcJsHYer8rrgWCinqkP34rLCwh5NByZAekslqDKMHYhGR7h4Wouqoj0dPoeZCKZAtZCIisKTRXdLp0UTbO9cGMSM94bc1OXdsCluP3nqAKZCO3TR1xJoYHBdaHlwo20LOecEb70KSZCcZA9TfNByfDywEGFQxqN9bgq2laUzEGydbZAePXq9K6wZDZD',
+            'value' => 'EAAI74AqdGiABP41H00RBeHzko9oBFs1qDt69GwgToobX97iOhZABCRWchwV7Rzt01SvijWJsMPet1fNFSqbEjzCJQvzUwjFvZBvlvSseaRch0zDPBzDsTGtCUZBBHxiiBqQvDf24X7pb6vaC1sHUbZCrAl3MhCByQbPgss1EaURtmn70W0x9ATSevFKd3RBnRdA6OIZA13ZAiL1JNksZC2MPiegdhE3ZAIdwMj4ZB04ZCjyguE9datRIUO5wEBXgPUZBgZDZD',
         ]);
 
         SystemConfig::updateOrCreate([
