@@ -9,3 +9,6 @@ Route::get('/user', function (Request $request) {
 
 
 Route::any('/facebook/webhook', App\Http\Controllers\FacebookWebhook::class);
+
+// Webhook CRUD API
+Route::apiResource('webhooks', App\Http\Controllers\Api\WebhookController::class);
