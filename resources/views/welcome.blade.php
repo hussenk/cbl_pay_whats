@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Libyan Center</title>
+		<title>@yield('title', 'WATIQ')</title>
 		<style>
 			body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:#f3f4f6; margin:0; }
 			.wrap { min-height:100vh; display:flex; align-items:center; justify-content:center; }
@@ -15,12 +15,13 @@
 	<body>
 		<div class="wrap">
 			<div class="card">
-				<h1>Libyan Center</h1>
-				<p>Welcome — this website is a testing environment for WhatsApp Business Platform integrations and webhook handling.</p>
+				<h1>@yield('title', 'WATIQ')</h1>
+				<p style="margin-top:8px; font-weight:700;">Welcome</p>
+				<p style="margin-top:6px; color:#6b7280;">This website is a testing environment for WhatsApp Business Platform integrations and webhook handling.</p>
 				@if(isset($webhookCount))
 					<p style="margin-top:10px; font-weight:600;">Webhooks received: <span style="background:#eef; padding:4px 8px; border-radius:6px;">{{ $webhookCount }}</span></p>
 				@endif
-		
+
 				<p style="margin-top:12px;">
 					<a href="/privacy-policy" style="margin-right:12px; color:#2563eb; text-decoration:none;">Privacy Policy</a>
 					<a href="/terms-of-service" style="color:#2563eb; text-decoration:none;">Terms of Service</a>
