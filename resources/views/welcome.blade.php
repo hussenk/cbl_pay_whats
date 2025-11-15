@@ -23,6 +23,10 @@
 				<p style="margin-top:12px;">
 					Useful docs: <a href="https://developers.facebook.com/docs/whatsapp" target="_blank">WhatsApp Business Platform Docs</a>
 				</p>
+				<p style="margin-top:12px;">
+					<a href="/privacy-policy" style="margin-right:12px; color:#2563eb; text-decoration:none;">Privacy Policy</a>
+					<a href="/terms-of-service" style="color:#2563eb; text-decoration:none;">Terms of Service</a>
+				</p>
 			</div>
 		</div>
 	</body>
