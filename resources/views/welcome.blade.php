@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>@yield('title', 'WATIQ')</title>
+		<title>@yield('title', 'WATIQ by Cloudtech')</title>
 		<style>
 			body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:#f3f4f6; margin:0; }
 			.wrap { min-height:100vh; display:flex; align-items:center; justify-content:center; }
@@ -15,7 +15,7 @@
 	<body>
 		<div class="wrap">
 			<div class="card">
-				<h1>@yield('title', 'WATIQ')</h1>
+				<h1>@yield('title', 'WATIQ by Cloudtech')</h1>
 				<p style="margin-top:8px; font-weight:700;">Welcome</p>
 				<p style="margin-top:6px; color:#6b7280;">This website is a testing environment for WhatsApp Business Platform integrations and webhook handling.</p>
 				@if(isset($webhookCount))
