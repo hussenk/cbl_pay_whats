@@ -19,4 +19,9 @@ Route::get('terms-of-service', function () {
 
 
 
-Route::any('/facebook/webhook', App\Http\Controllers\FacebookWebhook::class);
+Route::any('/facebook/webhook', App\Http\Controllers\WhatsAppWebhookController::class);
+
+// Minimal transaction verify route (used in QR)
+Route::get('/transactions/{id}', function (string $id) {
+    return response()->json(['id' => $id]);
+})->name('transaction.show');
