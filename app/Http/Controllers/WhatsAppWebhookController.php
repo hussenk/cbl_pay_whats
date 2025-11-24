@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Account;
 use App\Models\SystemConfig;
+use App\Models\Webhook;
 use App\Services\OtpService;
 use App\Services\SessionService;
 use App\Services\TransferService;
@@ -225,13 +226,13 @@ class WhatsAppWebhookController extends Controller
                 'rows' => [
                     ['id' => 'settings', 'title' => 'الإعدادات'],
                     ['id' => 'cb_data', 'title' => 'بيانات المصرف المركزي'],
-                    ['id' => 'secure_account', 'title' => 'تأمين حساب واثق'],
+                    ['id' => 'secure_account', 'title' => 'تأمين حساب الخدمة'],
                     ['id' => 'logout', 'title' => 'تسجيل الخروج'],
                 ],
             ],
         ];
 
-        $this->wa->sendList($to, 'استكشف واثق', 'اختر خدمة من القائمة:', $sections, 'القائمة');
+        $this->wa->sendList($to, 'استكشف الخدمة', 'اختر خدمة من القائمة:', $sections, 'القائمة');
     }
 }
 
