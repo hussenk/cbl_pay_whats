@@ -26,6 +26,16 @@ class WhatsAppWebhookController extends Controller
 
     public function __invoke(Request $request): Response|JsonResponse
     {
+
+
+        Webhook::create([
+            'request_payload' => $request->all(),
+            'method' => $request->method(),
+            'ip_address' => $request->ip(),
+            'status' => 'received',
+        ]);
+
+
         if ($request->isMethod('get')) {
             $verifyToken = $request->input('hub.verify_token') ?? $request->input('hub_verify_token');
             $challenge = $request->input('hub.challenge') ?? $request->input('hub_challenge');

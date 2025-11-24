@@ -14,7 +14,7 @@ class WhatsAppService
     ) {
         $this->token = $this->token ?? (string) config('services.whatsapp.token');
         $this->phoneNumberId = $this->phoneNumberId ?? (string) config('services.whatsapp.phone_number_id');
-        $this->apiBase = $this->apiBase ?? (string) config('services.whatsapp.base_uri', 'https://graph.facebook.com/v19.0');
+        $this->apiBase = $this->apiBase ?? (string) config('services.whatsapp.base_uri', 'https://graph.facebook.com/v24.0');
     }
 
     protected function endpoint(string $path): string
