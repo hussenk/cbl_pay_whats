@@ -23,6 +23,5 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call(SystemConfigSeeder::class);
-        $this->call(DemoBankSeeder::class);
     }
 }

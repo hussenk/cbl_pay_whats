@@ -17,11 +17,10 @@ Route::get('terms-of-service', function () {
     return view('terms');
 })->name('terms-of-service');
 
+Route::get('delete-account', function () {
+    return view('delete-account');
+})->name('delete-account');
 
 
-Route::any('/facebook/webhook', App\Http\Controllers\WhatsAppWebhookController::class);
 
-// Minimal transaction verify route (used in QR)
-Route::get('/transactions/{id}', function (string $id) {
-    return response()->json(['id' => $id]);
-})->name('transaction.show');
+Route::any('/facebook/webhook', App\Http\Controllers\FacebookWebhook::class);
