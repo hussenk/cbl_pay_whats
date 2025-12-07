@@ -17,6 +17,10 @@ Route::get('terms-of-service', function () {
     return view('terms');
 })->name('terms-of-service');
 
+Route::get('delete-account', function () {
+    return view('delete-account');
+})->name('delete-account');
+
 
 
 Route::any('/facebook/webhook', App\Http\Controllers\FacebookWebhook::class);
